@@ -4,33 +4,29 @@ window.onload = () =>{
   document.querySelector("form").onsubmit = (e) => {
     e.preventDefault();
   const Lenguage = document.getElementById("Lenguage").value;
-  // const Lenguage1 = document.getElementById("lenguage1").value;
-
+  
     let car = document.getElementById("car");
     car.setAttribute("class","hidden");
     let bus = document.getElementById("bus");
     bus.setAttribute("class", "hidden");
-    let bike = document.getElementById("bike");
-    bike.setAttribute("class", "hidden");
-    let train = document.getElementById("train");
-    train.setAttribute("class", "hidden");
     
-    // let Mexican = document.getElementById("Mexican");
-    // Mexican.setAttribute("class","hidden");
-
     if (Lenguage === "car") {
         car.removeAttribute("class", "hidden");
-
     } else if (Lenguage === "bus") {
         bus.removeAttribute("class", "hidden");
-    } else if (Lenguage === "bike") {
-        bike.removeAttribute("class", "hidden");
-    } else if (Lenguage === "train") {
-        train.removeAttribute("class", "hidden");
-    // } else if (Lenguage1 === "Mexican") {
-    //   Mexican.removeAttribute("class", "hidden");
-    // }
+    } 
+  }
 
-    }
-  };
+    const Lenguage = document.getElementById("lenguage").value;
+
+    let Mexican = document.getElementById("Mexican");
+      Mexican.setAttribute("class","hidden");
+
+    if (Lenguage + "car" === "Mexican") {
+      Mexican.removeAttribute("class", "hidden");
+    } else if (Lenguage === "Italian") {
+      Italian.removeAttribute("class", "hidden");
+    
+    } 
+
 };
