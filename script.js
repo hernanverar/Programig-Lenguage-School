@@ -2,13 +2,11 @@
 window.onload = () =>{
   document.querySelector("form").onsubmit = (e) => {
     e.preventDefault();
-
   const Lenguage = document.getElementById("Lenguage").value;
-  // const Lenguage1= document.getElementById("Lenguage1").value;
+  
 
     let car = document.getElementById("car");
-    car.setAttribute("class", "hidden");
-
+    car.setAttribute("class","hidden");
     let bus = document.getElementById("bus");
     bus.setAttribute("class", "hidden");
     let bike = document.getElementById("bike");
