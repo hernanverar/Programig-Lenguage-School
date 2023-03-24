@@ -1,9 +1,10 @@
 
+
 window.onload = () =>{
   document.querySelector("form").onsubmit = (e) => {
     e.preventDefault();
   const Lenguage = document.getElementById("Lenguage").value;
-  
+  // const Lenguage1 = document.getElementById("lenguage1").value;
 
     let car = document.getElementById("car");
     car.setAttribute("class","hidden");
@@ -14,17 +15,22 @@ window.onload = () =>{
     let train = document.getElementById("train");
     train.setAttribute("class", "hidden");
     
+    // let Mexican = document.getElementById("Mexican");
+    // Mexican.setAttribute("class","hidden");
 
     if (Lenguage === "car") {
         car.removeAttribute("class", "hidden");
+
     } else if (Lenguage === "bus") {
         bus.removeAttribute("class", "hidden");
     } else if (Lenguage === "bike") {
         bike.removeAttribute("class", "hidden");
     } else if (Lenguage === "train") {
         train.removeAttribute("class", "hidden");
-      }
+    // } else if (Lenguage1 === "Mexican") {
+    //   Mexican.removeAttribute("class", "hidden");
+    // }
 
+    }
   };
-
 };
