@@ -1,34 +1,65 @@
 
 
-window.onload = () =>{
-  document.querySelector("form").onsubmit = (e) => {
-    e.preventDefault();
-  const Lenguage = document.getElementById("Lenguage").value;
-  const Question1 = document.querySelector(".option");
-  const Question2 = document.querySelector(".option");
+function clickQ1(){
+  let answer1;
+  let q1 = document.getElementById('q1');
+  let q2 = document.getElementById('q2');
+  let q3 = document.getElementById('q3');
+  let q4 = document.getElementById('q4');
 
-    let car = document.getElementById("car");
-    car.setAttribute("class","hidden");
-    let bus = document.getElementById("bus");
-    bus.setAttribute("class", "hidden");
-    
-    if (Lenguage === "car") {
-        car.removeAttribute("class", "hidden");
-    } else if (Lenguage === "bus") {
-        bus.removeAttribute("class", "hidden");
-    } 
+  let answer = document.getElementsByName("transport");
+
+  for(i = 0; i < answer.length; i++) {
+      if (answer[i].checked) {
+          answer1 = answer[i].value;
+      }
   }
 
-    // const Lenguage = document.getElementById("lenguage").value;
+  switch(answer1)
+  {
+      case 'transportq1':
+          console.log('this was your answer ',answer1);
+          q1.style.visibility = 'hidden';
+          q2.style.visibility = 'visible';
+          break;
+      case 'transportq2':
+          console.log('this was your answer  ',answer1);
+          q1.style.visibility = 'hidden';
+          q3.style.visibility = 'visible';
+          break;
+      case 'transportq3':
+          console.log('answer was ',answer1);
+          q1.style.visibility = 'hidden';
+          q4.style.visibility = 'visible';
+          break;
+  }
 
-    let Mexican = document.getElementById("Mexican");
-      Mexican.setAttribute("class","hidden");
-
-    if (car === "Mexican") {
-      Mexican.removeAttribute("class", "hidden");
-    } else if (Lenguage === "Italian") {
-      Italian.removeAttribute("class", "hidden");
-    
-    } 
-
+  
 };
+
+function clickBtnBus(){
+  let q5 = document.getElementById('q5');
+  let answer1 = document.getElementById('answer1');
+  let answer2 = document.getElementById('answer2');
+  let answerTransport = document.getElementsByName("transport");
+
+  for(i = 0; i < answerTransport.length; i++) {
+      if (answerTransport[i].checked){
+          answerTransport = answerTransport[i].value;
+      }
+  }
+
+  let answerBus = document.getElementsByName("bus");
+
+  for(i = 0; i < answerBus.length; i++) {
+      if (answerBus[i].checked){
+        
+          answerBus = answerBus[i].value;
+      }
+  }
+
+  q5.style.visibility = 'visible';
+
+  answer1.innerHTML = answerTransport;
+  answer2.innerHTML = answerBus;
+}

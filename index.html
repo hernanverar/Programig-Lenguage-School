@@ -22,50 +22,81 @@
 
   </div>
 
-  <h4 class="important">Ready? But first we need a bit more information about you, take a minute to do this quick survey.</h4>
-    <p><b>Survey Question 1:</b> What's your favorite form of transportation?</p>
-  
-    <div class="Question1">
-    <h4>pick your answer</h4>
-    <ul class="option">
-      <li>car</li>
-      <li>bus</li>
-    </ul>
-  </div>
-  
-    <form>
-      <label for="Lenguage"></label>
-      <input id="Lenguage" type="text" name="Lenguage">
-      <input type="submit" value="enter answer">
-    </form>
+  <h4 class="important">Ready? But first we need a bit more information about you, take a minute to do this quick survey.</h4> 
 
-    <div id="car" class="hidden">
-      <p><b>Survey Question 2:</b> What's your favorite food?</p>
+  <form method="post" action="#">
+    <div id="q1" style="visibility:show">
+        <h3>1. What is your favorite form of transportation ?</h3>
+        <div>
+            <input type="radio" name="transport" id="transportq1" value="transportq1">a) Bus
+        </div>
+        <div>
+            <input type="radio" name="transport" id="transportq2" value="transportq2">b) Car
+        </div>
+        <div>
+            <input type="radio" name="transport" id="transportq3" value="transportq3">b) Others
+        </div>
+        <br>
+        <div>
+            <input type="button" name="btnTransport" id="btnTransport" onclick="clickQ1()" value="Next">
+        </div>
+    </div>
+    <div id="q2" style="visibility:hidden">
+        <h3>2. What route do use to move around ?</h3>
+        <div>
+            <input type="radio" name="bus" id="basq1" value="basq1">a) red route
+        </div>
+        <div>
+            <input type="radio" name="bus" id="basq2" value="basq2">b) blue route  
+        </div>
+        <div>
+            <input type="radio" name="bus" id="basq3" value="basq3">b) green route 
+        </div>
+        <br>
+        <div>
+            <input type="button" name="btnBus" id="btnBus" onclick="clickBtnBus();" value="Show">
+        </div>
+    </div>
+    <div id="q3" style="visibility:hidden">
+        <h3>2. What kind of car model you have?</h3>
+        <div>
+            <input type="radio" name="car" id="carq1" value="carq1">a) Ford
+        </div>
+        <div>
+            <input type="radio" name="car" id="carq2" value="carq2">b) Honda
+        </div>
+        <div>
+            <input type="radio" name="car" id="carq3" value="carq3">b) Nissan
+        </div>
+        <br>
+        <div>
+            <input type="button" name="btnCar" id="btnCar" onclick="" value="Show">
+        </div>
+    </div>
+    <div id="q4" style="visibility:hidden">
+        <h3>2. How do get aroud the city?</h3>
+        <div>
+            <input type="radio" name="car" id="bike" value="bike">a) Bike
+        </div>
+        <div>
+            <input type="radio" name="car" id="mono" value="mono">b) skateboard
+        </div>
+        <div>
+            <input type="radio" name="car" id="walk" value="walk">b) Walk
+        </div>
+        <br>
+        <div>
+            <input type="button" name="btnOther" id="btnOther" onclick="" value="Show">
+        </div>
+    </div>
+    <div id="q5" style="visibility:hidden">
+        <h3>This are yor answers</h3>
+        <div id="answer1"></div>
+        <div id="answer2"></div>
+    </div>
 
-      <div class="Question1">
-      <h4>pick your answer</h4>
-    <ul class="option">
-      <li>Mexican</li>
-      <li>Italian</li>
-    </ul>
-  </div>
-  
-  <form>
-    <input id="Lenguage" type="text" name="Lenguage">
-      <input type="submit" value="enter answer">
-  </form>
+</form>
 
-  <div id="Mexican" class="hidden">
-    <h1>Congragts your best fit is Ruby!!</h1></div>
-
-
-
-    <div id="bus" class="hidden">
-        <h1>Congragts your best fit is Javascrip!!</h1></div>
-    <div id="bike" class="hidden">
-        <h1>Congragts your best fit is Swift!!</h1></div>
-    <div id="train" class="hidden">
-          <h1>Congragts your best fit is C#!!</h1></div> 
 
 </body>
 </html>
