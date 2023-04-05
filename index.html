@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="script.js"defer></script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Independent Project #3</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js"defer></script>
+    <title>Independent Project #3</title>
 
 </head>
 <body>
-  <h1>Programing Lenguage School</h1>
-  <h2>Welcome to Our Programing School</h2>
-  <h4> This school will provide you with the following programing lenguages and the Knowlege you have been looking for but, first we need to take a small survey that way we can guarantee the best fit for you.</h4>
+    <h1>Programing Lenguage School</h1>
+        <h2>Welcome to Our Programing School</h2>
+        <h4> This school will provide you with the following programing lenguages and the Knowlege you have been looking for but, first we need to take a small survey that way we can guarantee the best fit for you.</h4>
 
-  <div>
-    <p>Ruby</p>
-    <p>Javascrip</p>
-    <p>Swift</p>
-    <p>C#</p>
+    <div>
+        <p>Ruby</p>
+        <p>Javascript</p>
+        <p>Swift</p>
+        <p>C#</p>
+    </div>
 
-  </div>
+    <h4 class="important">Ready? But first we need a bit more information about you, take a minute to do this quick survey.</h4>
 
-  <h4 class="important">Ready? But first we need a bit more information about you, take a minute to do this quick survey.</h4> 
-
-  <form method="post" action="#">
-    <div id="q1" style="visibility:show">
-        <h3>1. What is your favorite form of transportation ?</h3>
+    <div id="q1">
+        <h3>1. What is your favorite form of transportation?</h3>
         <div>
             <input type="radio" name="transport" id="transportq1" value="transportq1">a) Bus
         </div>
@@ -34,67 +29,60 @@
             <input type="radio" name="transport" id="transportq2" value="transportq2">b) Car
         </div>
         <div>
-            <input type="radio" name="transport" id="transportq3" value="transportq3">b) Others
+            <input type="radio" name="transport" id="transportq3" value="transportq3">b) Train
         </div>
-        <br>
-        <div>
+    <div>
             <input type="button" name="btnTransport" id="btnTransport" onclick="clickQ1()" value="Next">
         </div>
     </div>
-    <div id="q2" style="visibility:hidden">
-        <h3>2. What route do use to move around ?</h3>
-        <div>
-            <input type="radio" name="bus" id="basq1" value="basq1">a) red route
-        </div>
-        <div>
-            <input type="radio" name="bus" id="basq2" value="basq2">b) blue route  
-        </div>
-        <div>
-            <input type="radio" name="bus" id="basq3" value="basq3">b) green route 
-        </div>
-        <br>
-        <div>
-            <input type="button" name="btnBus" id="btnBus" onclick="clickBtnBus();" value="Show">
-        </div>
-    </div>
-    <div id="q3" style="visibility:hidden">
-        <h3>2. What kind of car model you have?</h3>
-        <div>
-            <input type="radio" name="car" id="carq1" value="carq1">a) Ford
-        </div>
-        <div>
-            <input type="radio" name="car" id="carq2" value="carq2">b) Honda
-        </div>
-        <div>
-            <input type="radio" name="car" id="carq3" value="carq3">b) Nissan
-        </div>
-        <br>
-        <div>
-            <input type="button" name="btnCar" id="btnCar" onclick="" value="Show">
-        </div>
-    </div>
-    <div id="q4" style="visibility:hidden">
-        <h3>2. How do get aroud the city?</h3>
-        <div>
-            <input type="radio" name="car" id="bike" value="bike">a) Bike
-        </div>
-        <div>
-            <input type="radio" name="car" id="mono" value="mono">b) skateboard
-        </div>
-        <div>
-            <input type="radio" name="car" id="walk" value="walk">b) Walk
-        </div>
-        <br>
-        <div>
-            <input type="button" name="btnOther" id="btnOther" onclick="" value="Show">
-        </div>
-    </div>
-    <div id="q5" style="visibility:hidden">
-        <h3>This are yor answers</h3>
-        <div id="answer1"></div>
-        <div id="answer2"></div>
-    </div>
 
+    <div id="q2" style="visibility: hidden">
+        <h3>2. What route do use to move around the city?</h3>
+        <div>
+            <input type="radio" name="transport" id="transportq4" value="transportq4">a) red route
+    </div>
+        <div>
+            <input type="radio" name="transport" id="transport5" value="transport5">b) green route 
+        </div>
+        <br>
+        <div>
+            <input type="button" name="btntransport" id="btntransport" onclick="clickQ1()" value="Next">
+        </div>
+    </div>
+    <div id="q3" style="visibility: hidden" >
+        <h3>3. What kind of car model you have?</h3>
+        <div>
+            <input type="radio" name="transport" id="transportq6" value="transportq6">a) Ford
+        </div>
+        <div>
+            <input type="radio" name="transport" id="transportq7" value="transportq7">b) Honda
+        </div>
+        <br>
+        <div>
+            <input type="button" name="btntransport" id="btntransport" onclick="clickQ1()" value="Show">
+        </div>
+    </div>
+    <div id="q4" style="visibility: hidden">
+        <h3>4. How do get around the city?</h3>
+        <div>
+            <input type="radio" name="transport" id="transportq8" value="transportq8">a) Bike
+        </div>
+        <div>
+            <input type="radio" name="transport" id="transportq9" value="transportq9">b) skateboard
+        </div>
+        <br>
+        <div>
+            <input type="button" name="btntransport" id="btntransport" onclick="clickQ1()" value="Show">
+        </div>
+    </div> 
+<form">
+    <div id="q5" style="visibility: hidden;"><h1>Congratulations the best fit for you is Javascript!!</h1></div>
+    <div id="q6" style="visibility: hidden;"><h1>Congratulations the best fit for you is C#!!</h1></div>
+    <div id="q7" style="visibility: hidden;"><h1>Congratulations the best fit for you is Ruby!!</h1></div>
+    <div id="q8" style="visibility: hidden;"><h1>Congratulations the best fit for you is Phython!!</h1></div>
+    <div id="q9" style="visibility: hidden;"><h1>Congratulations the best fit for you is Java!!</h1></div>
+    <div id="q10" style="visibility: hidden;"><h1>Congratulations the best fit for you is Swift!!</h1></div>
+    <div id="q11" style="visibility: hidden;"><h1>Congratulations the best fit for you is SQL!!</h1></div>
 </form>
 
 
